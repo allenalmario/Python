@@ -1,0 +1,69 @@
+from dojo_ninjas_app.models import Dojo, Ninja
+
+Dojo.objects.create(name="The Seattle Dojo",city="Seattle",state="Washington")
+
+Dojo.objects.create(name="Empire Dojo",city="New York",state="New York")
+
+Dojo.objects.create(name="King Dojo",city="Los Angeles",state="California")
+
+delete_dojo = Dojo.objects.get(id=1)
+delete_dojo.delete()
+
+delete_dojo = Dojo.objects.get(id=2)
+delete_dojo.delete()
+
+delete_dojo = Dojo.objects.get(id=3)
+delete_dojo.delete()
+
+Dojo.objects.create(name="Cobra Kai",city="Los Angeles",state="California")
+
+Dojo.objects.create(name="Miyago-Do Karate",city="Los Angeles",state="California")
+
+Dojo.objects.create(name="Eagle Fang Karate",city="Los Angeles", state="California")
+
+dojo = Dojo.objects.get(id=4)
+Ninja.objects.create(dojo_id=dojo, first_name="johnny", last_name="Lawrence")
+
+Ninja.objects.create(dojo_id=dojo, first_name="Miguel", last_name="Diaz")
+
+Ninja.objects.create(dojo_id=dojo, first_name="Eli", last_name="Moskowitz")
+
+dojo = Dojo.objects.get(id=5)
+
+Ninja.objects.create(dojo_id=dojo, first_name="Daniel", last_name="Larusso")
+
+Ninja.objects.create(dojo_id=dojo, first_name="Samantha", last_name="Larusso")
+
+Ninja.objects.create(dojo_id=dojo, first_name="Robby", last_name="Keene")
+
+Ninja.objects.create(dojo_id=dojo, first_name="Elon", last_name="Musk")
+
+dojo = Dojo.objects.get(id=6)
+
+Ninja.objects.create(dojo_id=dojo, first_name="Jeff", last_name="Bezos")
+
+Ninja.objects.create(dojo_id=dojo, first_name="Michael", last_name="Choi")
+
+Ninja.objects.create(dojo_id=dojo, first_name="Han", last_name="Solo")
+
+cobrakai = Dojo.objects.first()
+
+print(cobrakai.ninjas.all())
+
+eaglefang = Dojo.objects.last()
+
+print(eaglefang.ninjas.all())
+
+lastninja = Ninja.objects.last()
+
+print(lastninja.dojo_id)
+
+python manage.py makemigrations
+
+python manage.py migrate
+
+python manage.py shell
+
+from dojo_ninjas_app.models import Dojo, Ninja
+
+Dojo.objects.create(name="Eco Friendly Dojo", city="Seattle", state="Washington", desc="Karate and free Starbucks")

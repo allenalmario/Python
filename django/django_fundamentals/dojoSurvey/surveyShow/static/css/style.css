@@ -1,0 +1,64 @@
+form {
+    border: 5px solid black;
+    width: 700px;
+    height: auto;
+    margin-top: 70px;
+}
+
+select {
+    width: 400px;
+}
+
+input {
+    width: 392px;
+}
+
+.container {
+    width: 970px;
+    /* border: 3px dotted red; */
+    margin: 0px auto;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+}
+.namePart {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.locationPart {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.languagePart {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.commentBox {
+    display: block;
+    width: 655px;
+    height: 150px;
+    margin-top: 25px;
+}
+
+.commentPart {
+    margin: 20px;
+}
+
+.button {
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px;
+}
+
+button {
+    width: 120px;
+    height: 40px;
+    background-color: lightblue;
+    color: white;
+}

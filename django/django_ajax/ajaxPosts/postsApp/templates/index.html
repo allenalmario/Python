@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <title>Ajax Posts</title>
+    </head>
+    <body>
+        <div class="container">
+            <h1>My Posts</h1>
+            <div class="posts">
+                {% for post in all_posts reversed %}
+                    <p class="indvPosts">{{post.desc}}</p>
+                {% endfor %}
+            </div>
+            <form action="/uploadPost" method="POST">
+                {% csrf_token %}
+                <label for="post">Add a note:</label>
+                <textarea name="post"></textarea>
+                <input type="submit" value="Post It!">
+            </form>
+        </div>
+    </body>
+    <script>
+        $('form').submit(function(e){
+            e.preventDefault()
+            $.ajax({
+                url: '/uploadPost',
+                method: "POST",
+                data: $(this).serialize(),
+                success: function(serverResponse) {
+                    $('.posts').html(serverResponse)
+                }
+            })
+        });
+    </script>
+</html>

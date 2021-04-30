@@ -1,0 +1,40 @@
+.container {
+    width: 970px;
+    /* border: 3px dotted red; */
+    margin: 0px auto;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.dataInfo {
+    border: 5px solid black;
+    width: 700px;
+    height: 424px;
+    margin-top: 70px;
+}
+
+h2 {
+    text-decoration: underline;
+    margin-left: 30px;
+}
+.content {
+    display: flex;
+}
+
+.titles {
+    margin-left: 60px;
+}
+
+.info {
+    margin-left: 200px;
+}
+
+button {
+    margin-left: 550px;
+    margin-top: 90px;
+    width: 120px;
+    height: 40px;
+    background-color: lightblue;
+    color: white;
+}

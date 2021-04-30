@@ -1,0 +1,65 @@
+.container {
+    display: flex;
+    /* border: 2px dotted red; */
+    width: 970px;
+    margin: auto;
+}
+
+.addForm {
+    /* border: 3px dotted green; */
+    width: 500px;
+    margin: auto;
+}
+
+.addForm label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.addForm input[type="text"] {
+    width: 340px;
+    height: 30px;
+    margin-bottom: 10px;
+}
+
+.middleForm input[type="text"] {
+    width: 145px;
+    height: 30px;
+}
+
+.middleForm input[type="date"] {
+    width: 145px;
+    height: 30px;
+}
+
+.middleForm {
+    /* border: 3px dotted yellow; */
+    display: flex;
+}
+
+.middleLeft label {
+    display: block;
+}
+
+.middleRight label {
+    display: block;
+}
+
+.middleLeft {
+    margin-right: 20px;
+}
+
+.middleRight {
+    margin-left: 20px;
+}
+
+.textbox textarea {
+    width: 340px;
+    height: 200px;
+    margin-bottom: 10px;
+}
+
+a {
+    display: block;
+    margin-top: 15px;
+}

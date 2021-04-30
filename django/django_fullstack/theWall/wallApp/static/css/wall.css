@@ -1,0 +1,92 @@
+/* .leftContent p {
+    color: green;
+    font-size: 20px;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.leftContent {
+    margin-left: 50px;
+} */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid black;
+}
+
+.rightContent {
+    display: flex;
+    align-items: center;
+}
+
+.rightContent p {
+    margin-right: 150px; 
+}
+
+.leftContent h1 {
+    margin-left: 20px;
+}
+
+.body {
+    /* border: 2px dotted red; */
+    width: 970px;
+    margin: auto;
+}
+
+.body label {
+    display: block;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.body textarea {
+    display: block;
+    width: 970px;
+    height: 75px;
+    border: 2px solid black;
+}
+
+.body form input[type=submit] {
+    background-color: #2c78e4;
+    color: white;
+    width: 150px;
+    margin-top: 15px;
+}
+
+.body .content {
+    /* border: 2px dotted green; */
+    width: 930px;
+    margin: auto;
+}
+
+.body .commentForm {
+    margin-left: 40px;
+}
+
+.body .commentForm form input[type=submit]{
+    background-color: #01a010;
+    color: white;
+    width: 120px;
+    margin-top: 15px;
+}
+
+.body .commentForm label {
+    display: block;
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+
+.body .commentForm textarea {
+    display: block;
+    width: 920px;
+    height: 35px;
+    border: 2px solid black;
+}
+
+.body .commentForm #comments {
+    text-decoration: underline;
+}

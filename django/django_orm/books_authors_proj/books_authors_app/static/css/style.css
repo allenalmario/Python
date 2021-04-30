@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    width: 970px;
+    margin: auto;
+}
+
+form input {
+    display: block;
+    width: 400px;
+    margin-bottom: 5px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form button {
+    display: block;
+}
+
+textarea {
+    width: 400px;
+    height: 100px;
+}
+
+.left-content {
+    margin-right: 300px;
+}
+
+table {
+    width: 395px;
+    height: 232px;
+}
+
+table th {
+    border: 1px solid black;
+}
+
+table td {
+    border: 1px solid black;
+    padding-left: 5px;
+}

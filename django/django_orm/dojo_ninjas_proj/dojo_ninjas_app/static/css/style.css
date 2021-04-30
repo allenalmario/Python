@@ -1,0 +1,36 @@
+.container {
+    /* border: 3px dotted red; */
+    width: 970px;
+    margin: auto;
+}
+
+.top-content {
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+    border-bottom: 2px solid black;
+    padding-bottom: 30px;
+}
+
+.top-content form input {
+    display: block;
+    margin-bottom: 15px;
+}
+
+.top-content label {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.top-content select {
+    display: block;
+    margin-bottom: 15px;
+}
+
+.bottom-content {
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+}

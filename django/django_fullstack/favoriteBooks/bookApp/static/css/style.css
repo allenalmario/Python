@@ -1,0 +1,41 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 3px solid black;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.container .body {
+    display: flex;
+    padding-left: 50px;
+    justify-content: space-evenly;
+}
+
+.container .body form input {
+    height: 25px;
+    width: 200px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.container .body form label {
+    font-size: 20px;
+}
+
+.container .body form input[type=submit] {
+    width: 100px;
+}
+
+.container .body textarea {
+    display: block;
+    width: 200px;
+    height: 150px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.container .body form input{
+    display: block;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Update</title>
+</head>
+<body>
+    <div class="container">
+        <div class="addForm">
+            <form action="/changeShowDetails" method="POST">
+                {% csrf_token %}
+                {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+            <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+                <h1>Edit Show {{ editThisShow.id }}</h1>
+                <input type="hidden" name="id" value="{{ editThisShow.id }}">
+                <label for="titleToEdit">Title</label>
+                <input type="text" name="titleToEdit" value="{{ editThisShow.title }}">
+                <div class="middleForm">
+                    <div class="middleLeft">
+                        <label for="networkToEdit">Network</label>
+                        <input type="text" name="networkToEdit" value="{{ editThisShow.network }}">
+                    </div>
+                    <div class="middleRight">
+                        <label for="rdToEdit">Release Date</label>
+                        <input type="date" name="rdToEdit" value="{{ time }}">
+                    </div>
+                </div>
+                <div class="textbox">
+                    <label for="descToChange">Description</label>
+                    <textarea name="descToChange">{{ editThisShow.desc }}</textarea>
+                </div>
+                <input type="submit">
+                <a href="http://localhost:8000/shows/{{ editThisShow.id }}">Go to Show</a>
+            </form>
+        </div>
+            <p><a href="http://localhost:8000/shows">Go Back</a></p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+.container {
+    display: flex;
+    width: 970px;
+    margin: auto;
+    justify-content: space-evenly;
+}
+
+form input {
+    display: flex;
+    height: 30px;
+    width: 300px;
+    margin-bottom: 30px;
+    margin-top: 10px;
+}
+
+form label {
+    font-size: 20px;
+}
+
+form [type="submit"] {
+    width: 70px;
+    display: block;
+    justify-content: center;
+    margin: auto;
+}
+
+.messages {
+    color: red;
+}

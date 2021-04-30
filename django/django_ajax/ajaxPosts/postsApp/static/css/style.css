@@ -1,0 +1,42 @@
+*  {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    padding: 40px;
+}
+
+h1 {
+    font-size: 60px;
+}
+
+.posts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.indvPosts {
+    border: 3px solid black;
+    background-color: #ffe454;
+    width: 200px;
+    height: 200px;
+    padding-top: 20px;
+    padding-left: 20px;
+    margin: 20px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+}
+form textarea {
+    display: block;
+    margin-bottom: 10px;
+    height: 150px;
+    width: 400px;
+}
+input [type = submit] {
+    display: block;
+}

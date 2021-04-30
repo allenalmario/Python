@@ -1,0 +1,8 @@
+.container {
+    margin: 100px auto;
+    width: 900px;
+    height: 400px;
+    text-align: center;
+    padding-top: 200px;
+    background-color: lightblue;
+}

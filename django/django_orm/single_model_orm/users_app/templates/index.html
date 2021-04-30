@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>C+R Users</title>
+</head>
+<body>
+    <div class="container">
+        <div class="top-content">
+            <h1>All The Users</h1>
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Age</th>
+                </tr>
+                {% for user in Users %}
+                <tr>
+                    <td>{{ user.id }}</td>
+                    <td>{{ user.first_name }}  {{ user.last_name }}</td>
+                    <td>{{ user.email_address }}</td>
+                    <td>{{ user.age }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+        <div class="bottom-content">
+            <h1>Add a User</h1>
+            <form method="POST" action="/process">
+                {% csrf_token %}
+                <div class="first-last">
+                    <label for="first_name">First Name</label>
+                    <input type="text" name="first_name">
+                    <label for="last_name">Last Name</label>
+                    <input type="text" name="last_name">
+                </div>
+                <div class="email-age">
+                    <label for="email">Email</label>
+                    <input type="text" name="email">
+                    <label for="age">Age</label>
+                    <input type="text" name="age">
+                </div>
+                <button type="submit">Add</button>
+            </form>
+
+        </div>
+    </div>
+</body>
+</html>

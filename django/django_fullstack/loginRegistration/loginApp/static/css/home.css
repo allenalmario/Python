@@ -1,0 +1,12 @@
+.leftContent p {
+    color: green;
+    font-size: 20px;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.leftContent {
+    margin-left: 50px;
+}

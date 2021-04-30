@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Ninja Money</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <p>Your Gold: </p>
+            <p class="userGold">{{ request.session.gold }}</p>
+        </div>
+        <div class="options">
+            <div class="farm">
+                <h1>Farm</h1>
+                <p>(Earns 10 - 20 golds)</p>
+                <form action="process" method="POST">
+                    {% csrf_token %}
+                    <input type="hidden" name="which_form" value="farm">
+                    <button type="submit">Find Gold!</button>
+                </form>
+            </div>
+            <div class="cave">
+                <h1>Cave</h1>
+                <p>(Earns 5 - 10 golds)</p>
+                <form action="process" method="POST">
+                    {% csrf_token %}
+                    <input type="hidden" name="which_form" value="cave">
+                    <button type="submit">Find Gold!</button>
+                </form>
+            </div>
+            <div class="house">
+                <h1>House</h1>
+                <p>(Earns 2 - 5 golds)</p>
+                <form action="process" method="POST">
+                    {% csrf_token %}
+                    <input type="hidden" name="which_form" value="house">
+                    <button type="submit">Find Gold!</button>
+                </form>
+            </div>
+            <div class="casino">
+                <h1>Casino</h1>
+                <p>(Earns/Takes 0 - 50 golds)</p>
+                <form action="process" method="POST">
+                    {% csrf_token %}
+                    <input type="hidden" name="which_form" value="casino">
+                    <button type="submit">Find Gold!</button>
+                </form>
+            </div>
+        </div>
+        <P>Activites</P>
+        <textarea>
+            {% for sentence in request.session.list reversed %}
+                {{sentence}}
+            {% endfor %}
+        </textarea>
+    </div>
+
+</body>
+</html>

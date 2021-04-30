@@ -1,0 +1,55 @@
+.container {
+    /* border: 5px dotted red; */
+    width: 970px;
+    margin: auto;
+}
+
+.top-content {
+    border-bottom: 3px solid black;
+}
+
+table {
+    margin: auto;
+    text-align: left;
+    border: 1px solid black;
+    width: 800px;
+    margin-bottom: 15px;
+}
+
+tr {
+    border: 1px solid black;
+    background-color: #eeeeee;
+}
+
+.top-content h1 {
+    text-align: center;
+}
+
+.bottom-content h1 {
+    text-align: center;
+}
+
+.first-last {
+    display: flex;
+    display: column;
+    justify-content: center;
+    justify-content: space-evenly;
+    margin-bottom: 15px;
+}
+
+.email-age {
+    display: flex;
+    display: column;
+    justify-content: center;
+    justify-content: space-evenly;
+    margin-bottom: 10px;
+}
+
+button {
+    display: block;
+    margin: auto;
+    width: 75px;
+    height: 25px;
+    background-color: #eeeeee;
+    margin-bottom: 10px;
+}
